@@ -3,7 +3,7 @@ import React from "react";
 function useEscapeKey(callback) {
   React.useEffect(() => {
     function fireWhenEsc(event) {
-      if (event.key === "Escape") callback();
+      if (event.key === "Escape") callback(callback);
     }
     document.addEventListener("keydown", fireWhenEsc);
 
